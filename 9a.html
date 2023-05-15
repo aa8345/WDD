@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch text file</title>
+
+    <script>
+        function fetch(){
+            var xhr=new XMLHttpRequest();
+            xhr.open("GET","file.txt",true);
+
+            xhr.onload=function(){
+                document.getElementById('result').innerHTML=this.responseText;
+            };
+            xhr.send();
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <p id="result">Hello World!</p><br>
+        <button onclick="fetch()">Fetch Text</button>
+    </div> 
+</body>
+</html>

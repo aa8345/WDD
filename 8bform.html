@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>SRM Cloud Portal Registration</title>
+	
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		form {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 20px;
+			max-width: 600px;
+			margin: 0 auto;
+			box-shadow: 0 0 10px #ccc;
+			border-radius: 5px;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color: #555;
+		}
+		input[type="file"],
+		input[type="text"],
+		input[type="date"],
+		input[type="email"],
+		select,
+		input[type="tel"] {
+			display: block;
+			width: 100%;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			color: #555;
+		}
+		input[type="radio"] {
+			margin-right: 10px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left:250px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>SRM Cloud Portal Registration Form</h1>
+	<form action="register.jsp" method="post" >
+		<label for="photo">Choose Photo:</label>
+		<input type="file" name="photo" id="photo" ><br>
+		<label for="name">Student's Name:</label>
+		<input type="text" name="name" id="name" ><br>
+		<label for="fname">Father's Name:</label>
+		<input type="text" name="fname" id="fname" ><br>
+		<label for="mname">Mother's Name:</label>
+		<input type="text" name="mname" id="mname" ><br>
+		<label for="gender">Gender:</label>
+		<input type="radio" name="gender" value="Male" id="gender" > Male
+		<input type="radio" name="gender" value="Female" id="gender"> Female
+		<br>
+		<label for="dob">Date of Birth:</label>
+		<input type="date" name="dob" id="dob" ><br>
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" ><br>
+		<label for="department">Department:</label>
+		<select name="department" id="department" >
+			<option value="">--Select Department--</option>
+			<option value="CSE">Computer Science and Engineering</option>
+			<option value="EEE">Electrical and Electronics Engineering</option>
+			<option value="ECE">Electronics and Communication Engineering</option>
+			<option value="MECH">Mechanical Engineering</option>
+		</select><br>
+		<label for="mobile">Mobile Number:</label>
+		<input type="tel" name="mobile" id="mobile" ><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

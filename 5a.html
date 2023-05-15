@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXP-5a FORM Validation</title>
+
+    <script>
+        function calcSalary(){
+
+            var name=document.getElementById('name').value;
+            if(name==null||name==""){
+                alert('Pls fill the requirede fields')
+            }
+                
+
+            else{
+                var bs,da,hra,tot
+
+            bs=parseInt(document.getElementById('bs').value);
+
+            da=0.6*bs;
+            hra=0.4*bs;
+            tot=bs+da+hra
+            document.getElementById('hra').value=hra;
+            document.empForm.da.value=da;
+            document.getElementById('tot').value=tot;
+            }
+            }
+            
+            
+        
+    </script>
+</head>
+
+<body>
+<div class="table" aling="centre">
+    <form name="empForm" action="">
+        <table border="2" style="background-color: aqua;" align="center">
+            <tr>
+                <th colspan="2">Employee Salary Report</th>
+            </tr>
+            <tr>
+                <td>Employee Name:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Employee No:</td>
+                <td><input type="text" name="empno" id="empno"></td>
+            </tr>
+            <tr>
+                <td>Designation:</td>
+                <td><input type="text" name="desg" id="desg"></td>
+            </tr>
+            <tr>
+                <td>Basic Salary:</td>
+                <td><input type="text" name="bs" id="bs"></td>
+            </tr>
+            <tr>
+                <td>HRA (40%):</td>
+                <td><input type="text" name="hra" id="hra"></td>
+            </tr>
+            <tr>
+                <td>DA (60%):</td>
+                <td><input type="text" name="da" id="da"></td>
+            </tr>
+            <tr>
+                <td>Total Salary:</td>
+                <td><input type="text" name="tot" id="tot"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input align="'centre" type="button" value="Calculate" onclick="calcSalary()"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

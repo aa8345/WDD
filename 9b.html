@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AJAX Program to read data from JSON file</title>
+    <script >
+
+    function loadData() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'age.json');
+    xhr.responseType = 'json';
+
+    xhr.onload = function() {
+      if (xhr.status == 200) {
+        const data = xhr.response;
+       
+        document.getElementById('data').innerHTML =`<p>Name : ${data.name}</p><p>Age : ${data.age}</p>`;
+      } else {
+        console.log('Error:', xhr.status);
+      }
+    };
+    xhr.send();
+  }
+    </script>
+  </head>
+  <body>
+    <button onclick="loadData()">Load Data</button>
+    <div id="data"></div>
+  </body>
+</html>
