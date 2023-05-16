@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Media Elements Example</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    audio, video {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+
+    track {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML5 Media Elements Example</h1>
+  
+  <h2>Image</h2>
+  <img src="image.jpg" alt="Example Image">
+
+  <h2>Audio</h2>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg">
+    <track kind="subtitles" src="audio-en.vtt" srclang="en" label="English">
+    <track kind="subtitles" src="audio-fr.vtt" srclang="fr" label="Français">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <h2>Video</h2>
+  <video width="400" controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    <track kind="subtitles" src="video-en.vtt" srclang="en" label="English">
+    <track kind="subtitles" src="video-fr.vtt" srclang="fr" label="Français">
+    Your browser does not support the video tag.
+  </video>
+
+  <h2>Embed</h2>
+  <embed src="flash.swf" width="400" height="300">
+
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+</body>
+</html>
